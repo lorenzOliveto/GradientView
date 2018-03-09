@@ -1,4 +1,4 @@
-![GradientView](https://github.com/lorenzOliveto/GradientView/raw/master/images/cover.png)
+![GradientView](https://github.com/lorenzOliveto/GradientView/raw/master/Images/cover.png)
 
 A view with a configurable gradient.
 
