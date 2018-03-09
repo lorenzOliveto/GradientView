@@ -1,8 +1,10 @@
+![Cover](https://github.com/lorenzOliveto/GradientView/raw/master/cover.png)
+
 # GradientView
 
 A view with a configurable gradient.
 
-## Installation
+## Installation with CocoaPods
 
 Add to your Podfile
 
@@ -14,6 +16,11 @@ Then run
 ```
 pod install
 ```
+
+## Manual Installation
+
+Download or clone this repository and drag the file `GradientView.swift` to your project.
+
 ## Usage
 
 Drag a view in your storyboard and change its class to` GradientView`.
