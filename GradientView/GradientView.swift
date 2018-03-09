@@ -11,7 +11,7 @@ import UIKit
 open class GradientView: UIView {
     private var gradientLayer: CAGradientLayer!
     
-    @IBInspectable var colors: [Any]? {
+    open var colors: [Any]? {
         didSet {
             self.gradientLayer.colors = colors
         }
@@ -24,7 +24,7 @@ open class GradientView: UIView {
      * layer's bounds rectangle when drawn. (I.e. [0,0] is the bottom-left
      * corner of the layer, [1,1] is the top-right corner.) The default values
      * are [.5,0] and [.5,1] respectively. Both are animatable. */
-    var startPoint: CGPoint? {
+    open var startPoint: CGPoint? {
         didSet {
             if let startPoint = startPoint {
                 self.gradientLayer.startPoint = startPoint
@@ -35,7 +35,7 @@ open class GradientView: UIView {
         }
     }
     
-    var endPoint: CGPoint? {
+    open var endPoint: CGPoint? {
         didSet {
             if let endPoint = endPoint {
                 self.gradientLayer.endPoint = endPoint
@@ -45,7 +45,7 @@ open class GradientView: UIView {
             }
         }
     }
-
+    
     // MARK: - Initializers
     
     /**
@@ -108,14 +108,14 @@ open class GradientView: UIView {
         }
     }
     
-    
     /**
      Set the start and end point of the gradient.
      - Parameter startPoint:   start point.
      - Parameter endPoint:   end point.
      */
-    func set(startPoint: CGPoint, endPoint: CGPoint){
+    open func set(startPoint: CGPoint, endPoint: CGPoint){
         self.gradientLayer.startPoint = startPoint
         self.gradientLayer.endPoint = endPoint
     }
 }
+
