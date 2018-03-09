@@ -42,3 +42,7 @@ class ViewController: UIViewController {
     }
 }
 ```
+
+## License
+
+All source code is licensed under the [MIT License](https://raw.githubusercontent.com/lorenzOliveto/GradientView/master/License).
