@@ -29,6 +29,7 @@ Example:
 
 ```
 import UIKit
+import GradientView
 
 class ViewController: UIViewController {
 

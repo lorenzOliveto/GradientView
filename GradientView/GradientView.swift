@@ -77,7 +77,7 @@ open class GradientView: UIView {
         }
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.initGradientLayer()
     }
@@ -101,7 +101,7 @@ open class GradientView: UIView {
     
     // MARK: - Layout
     
-    override func layoutSubviews() {
+    override open func layoutSubviews() {
         super.layoutSubviews()
         if let gradientLayer = self.gradientLayer {
             gradientLayer.frame = self.bounds
