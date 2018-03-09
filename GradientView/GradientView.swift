@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GradientView: UIView {
+open class GradientView: UIView {
     private var gradientLayer: CAGradientLayer!
     
     @IBInspectable var colors: [Any]? {
