@@ -24,7 +24,7 @@ Pod::Spec.new do |s|
   #   * Try to keep it short, snappy and to the point.
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
-  s.description  = "VAInstrumentation SDK"
+  s.description  = "A view with a configurable gradient."
 
   s.homepage     = "https://github.com/lorenzOliveto/GradientView.git"
 
@@ -78,7 +78,7 @@ Pod::Spec.new do |s|
   #
 
   s.source       = { git: 'https://github.com/lorenzOliveto/GradientView.git' }
-  s.source_files = "VAInstrumentation/*.{h,m,swift}", "VAInstrumentation/**/*.{h,m,swift}"
+  s.source_files = "GradientView/*.{h,m,swift}", "GradientView/**/*.{h,m,swift}"
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #

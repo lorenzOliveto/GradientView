@@ -7,6 +7,7 @@ A view with a configurable gradient.
 Add to your Podfile
 
 ```
+use_frameworks!
 pod 'GradientView', git: 'https://github.com/lorenzOliveto/GradientView.git'
 ```
 
