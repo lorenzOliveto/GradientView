@@ -28,9 +28,8 @@ open class GradientView: UIView {
         didSet {
             if let startPoint = startPoint {
                 self.gradientLayer.startPoint = startPoint
-            }
-            else {
-                self.gradientLayer.startPoint = CGPoint(x: 0.5, y:0)
+            } else {
+                self.gradientLayer.startPoint = CGPoint(x: 0.5, y: 0)
             }
         }
     }
@@ -39,9 +38,8 @@ open class GradientView: UIView {
         didSet {
             if let endPoint = endPoint {
                 self.gradientLayer.endPoint = endPoint
-            }
-            else {
-                self.gradientLayer.endPoint = CGPoint(x: 0.5, y:1)
+            } else {
+                self.gradientLayer.endPoint = CGPoint(x: 0.5, y: 1)
             }
         }
     }
@@ -55,7 +53,7 @@ open class GradientView: UIView {
      - Parameter colors: The colors of the gradient.
      
      */
-    convenience init(frame: CGRect, colors: [Any]){
+    convenience init(frame: CGRect, colors: [Any]) {
         self.init(frame: frame, colors: colors, startPoint: nil, endPoint: nil)
     }
     
@@ -68,12 +66,12 @@ open class GradientView: UIView {
      - Parameter endPoint: The endPoint of the gradient.
      
      */
-    convenience init(frame: CGRect, colors: [Any], startPoint: CGPoint?, endPoint: CGPoint?){
+    convenience init(frame: CGRect, colors: [Any], startPoint: CGPoint?, endPoint: CGPoint?) {
         self.init(frame: frame)
         self.colors = colors
         self.startPoint = startPoint
-        if let endPoint = startPoint {
-            self.gradientLayer.endPoint = endPoint
+        if let endPoint = endPoint {
+            self.endPoint = endPoint
         }
     }
     
@@ -87,7 +85,7 @@ open class GradientView: UIView {
         self.initGradientLayer()
     }
     
-    private func initGradientLayer(){
+    private func initGradientLayer() {
         self.gradientLayer = CAGradientLayer()
         self.gradientLayer.frame = self.bounds
         
@@ -113,9 +111,31 @@ open class GradientView: UIView {
      - Parameter startPoint:   start point.
      - Parameter endPoint:   end point.
      */
-    open func set(startPoint: CGPoint, endPoint: CGPoint){
+    open func set(startPoint: CGPoint, endPoint: CGPoint) {
         self.gradientLayer.startPoint = startPoint
         self.gradientLayer.endPoint = endPoint
     }
 }
 
+class VerticalGradient: GradientView {
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        set(startPoint: CGPoint(x: 0.5, y: 0), endPoint: CGPoint(x: 0.5, y: 1))
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        set(startPoint: CGPoint(x: 0.5, y: 0), endPoint: CGPoint(x: 0.5, y: 1))
+    }
+    
+    convenience init(frame: CGRect, colors: [Any], startPoint: CGPoint?, endPoint: CGPoint?) {
+        self.init(frame: frame)
+        self.colors = colors
+        self.startPoint = startPoint ?? CGPoint(x: 0.5, y: 0)
+        if let endPoint = endPoint {
+            self.endPoint = endPoint
+        } else {
+            self.endPoint = CGPoint(x: 0.5, y: 1)
+        }
+    }
+}
