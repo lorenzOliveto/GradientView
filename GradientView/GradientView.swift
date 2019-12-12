@@ -117,7 +117,7 @@ open class GradientView: UIView {
     }
 }
 
-class VerticalGradientView: GradientView {
+open class VerticalGradientView: GradientView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         set(startPoint: CGPoint(x: 0.5, y: 0), endPoint: CGPoint(x: 0.5, y: 1))
